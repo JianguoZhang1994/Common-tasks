@@ -11769,9 +11769,22 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Write-by--Jianguo-Zhang-,-April-4,-2017">Write by  <a href="https://github.com/JianguoZhang1994">Jianguo Zhang</a> , April 4, 2017<a class="anchor-link" href="#Write-by--Jianguo-Zhang-,-April-4,-2017">&#182;</a></h2><p>Multiple Folders assign labels for acceleration data, 1 label is 1
+second, 1 second corresponds to 12 datas, each data includes 3 x, y, z</p>
+<p>Original data in <strong>Baboon_Coding</strong> folder and <strong>output</strong> folder. <strong>Baboon_Coding</strong> folder includes several xls files, <strong>output</strong> folder includes several acceleration dataset. Notices some xls files do not have corresponding acceleration data, you need to deal with carefully.</p>
+<p>Results in <strong>Feeding</strong> folder, <strong>Interacting</strong> folder and <strong>Multiple_label</strong> folder. For <strong>Feeding</strong>, where 1 represents feeding, 0 represents not feeding. For <strong>Interacting folder</strong>, where 1 represents interacting, 0 represents not interacting. For <strong>Multiple_labels folder</strong>, where 1 is running, 2 is walking, 3 is sitting, 4 is standing at rest, 5 is others.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os.path</span>
@@ -11808,9 +11821,19 @@ div#notebook {
 <span class="n">full_path6</span><span class="o">=</span><span class="p">[]</span>
 <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">folder6</span><span class="p">):</span>
     <span class="n">filename6</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</pre></div>
 
+</div>
+</div>
+</div>
 
-<span class="kn">import</span> <span class="nn">scipy.io</span> <span class="k">as</span> <span class="nn">scio</span>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.io</span> <span class="k">as</span> <span class="nn">scio</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">math</span> 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -11831,7 +11854,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">full_path2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -11846,7 +11869,7 @@ div#notebook {
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[2]:</div>
+<div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -11862,7 +11885,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">filename1</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">filename1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span>
@@ -11877,7 +11900,7 @@ div#notebook {
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[4]:</div>
+<div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -11893,7 +11916,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">filename2</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">filename2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span>
@@ -11908,7 +11931,7 @@ div#notebook {
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[5]:</div>
+<div class="prompt output_prompt">Out[33]:</div>
 
 
 
