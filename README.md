@@ -4,4 +4,4 @@
 
 This repository includes common resources and several tasks for personal need. 
 
-**Only for private use, All rights Reserved**
+**Note** Only for private use, All rights Reserved
